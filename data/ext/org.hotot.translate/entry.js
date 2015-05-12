@@ -178,7 +178,7 @@ function do_translate_selection(dst_lang) {
 
 do_translate:
 function do_translate(dst_lang, text, callback) {
-    var url = 'http://translate.google.com/translate_a/t?client=t&text=' + encodeURIComponent(text) + '&hl=' + dst_lang + '&sl=auto&tl=' + dst_lang + '&multires=1&otf=2&ssel=0&tsel=0&uptl=' + dst_lang + '&alttl=en&sc=1';
+    var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=' + dst_lang + '&dt=t&q=' + encodeURIComponent(text);
     var processData = function (data) {
         var result = {};
         result.responseData = {};
